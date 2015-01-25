@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<ui:insert name="title">Default Title</ui:insert>
+
+	<h:outputStylesheet library="css" name="style.css" />
+	<h:outputStylesheet library="css" name="table-style.css" />
+	<h:outputScript library="js" name="jquery-2.1.0.min.js" />
+	<h:outputScript library="js" name="jquery-ui.js" />
+	<h:outputScript library="js" name="script.js" />
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/ui-lightness/jquery-ui.css"/>
+
+</h:head>
+<f:view contentType="text/html">
+
+	<h:body >
+		<div id="mainDiv">
+
+			<table border="0" style="height: 630px; width: 1380px; top:-5px; left:-10px; position:absolute !important; ">
+				<tr style="min-height:10% !important;"> 
+					<td rowspan="5" ></td>
+					<td style="height: 10%; background-color: #AB9100;" id="headerDiv">
+						<ui:include src="header.xhtml"></ui:include>
+					</td>
+					<td rowspan="5" >
+					</td> 
+				</tr>
+				<tr style="min-height:90% !important;" >
+					<td style="background-color: yellow; text-align: center; text-decoration: none;">
+						<div id="navigation">
+							<h:outputLink value="addTraveler.xhtml" >Add Traveller &emsp;&emsp;</h:outputLink>
+								
+							<h:outputLink value="addTourPackage.xhtml" >Add Tour Package &emsp;&emsp;</h:outputLink>
+								
+							<h:outputLink value="addTourSales.xhtml" >Add Tour Sales &emsp;&emsp;</h:outputLink>
+								
+							<h:outputLink value="getInfo.xhtml" >Get Info</h:outputLink>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td
+						style="height: 80%; padding: 0px 25px 0px 25px; vertical-align: top;">
+						<ui:insert name="content">Default Content</ui:insert>
+					</td>
+				</tr>
+				<tr>
+					<td style="height:5%;background-color: #AB9100;">
+							<ui:include src="footer.xhtml"></ui:include>
+					</td>
+				</tr>
+				
+			</table>
+
+		</div>
+	</h:body>
+	<ui:debug rendered="true"/>
+</f:view>
+</html>

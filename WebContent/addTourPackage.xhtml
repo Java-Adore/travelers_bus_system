@@ -1,0 +1,77 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="template/master.xhtml">
+
+	<ui:define name="title">
+		<title>Add Tour Package</title>
+	</ui:define>
+
+	<ui:define name="content">
+
+		<h:form id="form">
+			<br /><br />
+			<fieldset id="fieldset" style="margin-bottom: 20px; align: right;">
+				<legend style="font-size: 20px; color: #04003A; font-weight: bold;">Add New Tour Package</legend>
+				<br />
+				<table>
+					<tr>
+						<td colspan="3"><h:messages style="color:#0040FF;" /></td>
+					</tr>
+					<tr>
+						<td><h:outputLabel value="Tour code: " />
+						</td>
+						<td><h:inputText id="tourCode"
+								value="#{tourPackageBean.tourCode}" required="true"
+								requiredMessage="Tour code is required." />
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputLabel
+								value="Vehicle number plate: " /></td>
+						<td><h:inputText id="vehicleNumberPlate"
+								value="#{tourPackageBean.vehicleNumberPlate}" required="true"
+								requiredMessage="Vehicle number plate is required." />
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputLabel value="Tour date: " />
+						</td>
+						<td><h:inputText id="tourDate" styleClass="tourDate"
+								value="#{tourPackageBean.tourDate}"
+								requiredMessage="Tour date is required."
+								required="true">
+								<f:convertDateTime pattern="yyyy-mm-dd" />
+							</h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputLabel
+								value="Depart from: " /></td>
+						<td><h:inputText id="departFrom"
+								value="#{tourPackageBean.departFrom}" required="true"
+								requiredMessage="Depart from is required." />
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputLabel
+								value="Destination: " /></td>
+						<td><h:inputText id="destination"
+								value="#{tourPackageBean.destination}" required="true"
+								requiredMessage="Destination is required." />
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><br /> <h:commandButton id="submit"
+								value="Add Tour Package" ajax="true" update=":form"
+								actionListener="#{tourPackageBean.addNewPackage()}" /></td>
+						<td></td>
+					</tr>
+				</table>
+			</fieldset>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

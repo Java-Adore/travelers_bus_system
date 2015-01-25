@@ -1,0 +1,98 @@
+
+.ui-widget-content {
+	background: transparent !important;
+}
+
+.ui-widget-header {
+	background: transparent !important;
+}
+
+.ui-datatable-header{color:black !important;}
+
+.ui-panelgrid td,.ui-panelgrid tr {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	border-style: none !important;
+	background: #E6E6E6 !important;
+}
+
+.ui-tree {
+	width: 150px !important;
+}
+
+.ui-tabs .ui-tabs-nav {
+	text-align: center;
+}
+
+.ui-tabs .ui-tabs-nav li {
+	float: right !important;
+}
+
+#header {
+	height: 50px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	width: 100%;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 55px;
+	font-family: verdana;
+}
+
+#footer {
+	width: 100%;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	height: 30px;
+	font-size: 15px;
+	font-family: verdana;
+}
+
+.location {
+	position: relative;
+	background-color: #fff;
+	padding: 0 11px 0 13px;
+	width: 400px;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	text-overflow: ellipsis;
+	z-index: 100;
+}
+
+#location:focus {
+	position: relative;
+	border-color: #4d90fe;
+	margin-left: -1px;
+	padding-left: 14px; /* Regular padding-left + 1. */
+	width: 401px;
+	z-index: 100;
+}
+.myClass{ border:none !important ;position:absolute !important; top:130px !important; margin-left:  auto !important;margin-right:  auto !important;width:100% !important;}
+.myClass .ui-dock-container-bottom {
+	position:relative !important;
+}
+
+.ui-datepicker thead {  
+    background-color: #EFF2FB; 
+}
+
+.ui-datepicker .ui-widget-content .ui-datepicker-header{
+    background-color: #EFF2FB;
+}
+
+
+.ui-datepicker table {  
+    background-color: #EFF2FB;  
+} 
+.ui-datepicker th { 
+	background-color: #EFF2FB;
+}
+
+.ui-fieldset{max-width: 70% !important ; min-width: 1000px !important ; margin-top:30px !important; }
+
+ .ui-panelgrid {background:transparent !important; width:100% !important;}
+  .ui-panelgrid td  {background:transparent !important;}
+   .ui-panelgrid  tr {background:transparent !important;}

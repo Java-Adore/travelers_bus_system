@@ -1,0 +1,49 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="template/master.xhtml">
+
+	<ui:define name="title">
+		<title>Add Tour Sales</title>
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form id="form">
+			<br /><br />
+			<fieldset id="fieldset" style="margin-bottom:20px;align:right;">
+  				<legend style="font-size: 20px; color: #04003A; font-weight: bold;">Add Tour Sales</legend>
+  				<br />
+				<h:messages style="color:#0040FF;" />
+				<h:panelGrid id="traveler" columns="2">
+
+					<h:outputLabel value="Select tour package: " />
+					<h:selectOneMenu
+						value="#{tourSalesDetailsBean.selectedTourPackageID}">
+						<f:selectItem itemLabel="-- Select Tour Package --" itemValue="#{null}"/>
+						<f:selectItems value="#{tourSalesDetailsBean.tourPackages}"
+							var="tourPackage" itemLabel="#{tourPackage.tourCode}"
+							itemValue="#{tourPackage.ID}" />
+					</h:selectOneMenu>
+
+					<h:outputLabel value="#{loc.TOUR_SALES_LBL_SELECT_TRAVELLER}" />
+					<h:selectOneMenu value="#{tourSalesDetailsBean.selectedTravelerID}">
+						<f:selectItem itemLabel="------ Select Traveler ------" itemValue="#{null}"/>
+						<f:selectItems value="#{tourSalesDetailsBean.travelers}"
+							var="traveler" itemLabel="#{traveler.emailAddress}"
+							itemValue="#{traveler.ID}" />
+					</h:selectOneMenu>
+
+					<f:facet name="footer">
+						<br />
+						<h:commandButton id="submit" value="Add Tour Sales"
+							ajax="true" update=":form"
+							actionListener="#{tourSalesDetailsBean.addNewTourSalesDetails()}" />
+					</f:facet>
+				</h:panelGrid>
+			</fieldset>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
